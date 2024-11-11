@@ -1,5 +1,5 @@
 
-package com.loja.ui;
+package com.loja.menu;
 
 import com.loja.gerenciador.GerenciadorProdutos;
 import com.loja.modelo.Produto;

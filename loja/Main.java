@@ -1,7 +1,7 @@
 
 package com.loja;
 
-import com.loja.ui.MenuProdutos;
+import com.loja.menu.MenuProdutos;
 
 public class Main {
     public static void main(String[] args) {

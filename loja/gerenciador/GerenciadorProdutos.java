@@ -28,20 +28,22 @@ public class GerenciadorProdutos {
         return new ArrayList<>(produtos);
     }
 
-    public boolean atualizar(Produto produto) {
-        for (int i = 0; i < produtos.size(); i++) {
-            if (produtos.get(i).getId().equals(produto.getId())) {
-                produtos.set(i, produto);
-                return true;
+    public boolean atualizar(Produto produtoAtualizar) {
+        for (Produto produto : produtos){
+            if (produto.equals(produtoAtualizar)){
+                int index = produtos.indexOf(produto);
+               produtos.set(index, produto);
+               return true;
             }
         }
         return false;
     }
 
     public boolean deletar(int id) {
-        for (int i = 0; i < produtos.size(); i++) {
-            if (produtos.get(i).getId() == id) {
-                produtos.remove(i);
+
+        for (Produto produto : produtos){
+            if (produto.getId() == id){
+                produtos.remove(produto);
                 return true;
             }
         }
