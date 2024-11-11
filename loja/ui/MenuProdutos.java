@@ -23,24 +23,31 @@ public class MenuProdutos {
             System.out.print("Escolha uma opção: ");
             opcao = Integer.parseInt(scanner.nextLine());
 
-            if (opcao == 1) {
-                cadastrarProduto();
-            } else if (opcao == 2) {
-                buscarProduto();
-            } else if (opcao == 3) {
-                listarProdutos();
-
-            } else if (opcao == 4) {
-                atualizarProduto();
-
-            } else if (opcao == 5) {
-                deletarProduto();
-
-            } else if (opcao != 6) {
-                System.out.println("Opção inválida!");
+            switch (opcao){
+                case 1:
+                    cadastrarProduto();
+                    break;
+                case 2:
+                    buscarProduto();
+                    break;
+                case 3:
+                    listarProdutos();
+                    break;
+                case 4:
+                    atualizarProduto();
+                    break;
+                case 5:
+                    deletarProduto();
+                    break;
+                case 6:
+                    opcao = 6;
+                    System.out.println("Saindo do Programa...");
+                    break;
+                default:
+                    System.out.println("Opção invaldia");
+                    break;
             }
         }
-        System.out.println("Saindo...");
     }
 
     private void cadastrarProduto() {
